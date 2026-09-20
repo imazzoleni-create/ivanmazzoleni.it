@@ -22,8 +22,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .menu a:hover{color:var(--gold2)}
 .lang{border:1px solid rgba(245,241,232,.3);border-radius:20px;padding:5px 14px;font-size:13px;color:var(--ivory)}
 /* HERO */
-header.hero{background:radial-gradient(ellipse at 50% 30%,#1d3d4c 0%,var(--night) 60%,var(--night2) 100%);color:var(--ivory);text-align:center;padding:96px 28px 110px}
-.hero svg{width:190px;height:190px;margin-bottom:34px}
+header.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;justify-content:center;background:var(--night2);color:var(--ivory);text-align:center;padding:0;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,37,46,.28) 0%,rgba(15,37,46,.40) 45%,rgba(15,37,46,.90) 100%)}
+.hero-inner{position:relative;max-width:920px;padding:140px 28px 88px}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:58px;line-height:1.18}
 .hero h1 .gold{color:var(--gold2)}
 .hero .sub{font-size:22px;line-height:1.55;color:rgba(245,241,232,.82);max-width:760px;margin:28px auto 0}
@@ -80,7 +82,8 @@ footer a{color:rgba(245,241,232,.85)} footer a:hover{color:var(--gold2)}
 .fcol div{margin-bottom:8px}
 @media(max-width:900px){
 .menu{display:none}
-.hero h1{font-size:36px}.hero .sub{font-size:18px}.hero svg{width:140px;height:140px}
+.hero h1{font-size:34px}.hero .sub{font-size:17px}
+header.hero{min-height:72vh}.hero-inner{padding:110px 24px 64px}
 h2{font-size:30px}
 .bio,.faber-inner{grid-template-columns:1fr;gap:36px}
 .cards,.posts{grid-template-columns:1fr}
@@ -92,10 +95,13 @@ section{padding:60px 0}
 <div class="lang">IT · EN</div>
 </div></nav>
 <header class="hero">
-<svg viewBox="0 0 560 560" id="heroSpiral"></svg>
+<img src="IMG_0088.JPG" alt="Ivan Mazzoleni sul palco dello Human Driven AI Summit" class="hero-img">
+<div class="hero-veil"></div>
+<div class="hero-inner">
 <h1>Il futuro non si subisce.<br><span class="gold">Si costruisce. E si vive adesso.</span></h1>
 <p class="sub">Sono Ivan Mazzoleni: manager, imprenditore, divulgatore. Aiuto persone e imprese a guidare l'intelligenza artificiale partendo da ciò che non si automatizza — i valori, il senso, il cuore.</p>
-<div class="cta-row"><a class="btn gold" href="#newsletter">Iscriviti al cantiere</a><a class="btn ghost" href="hdai.html">Ero a Pompei →</a></div>
+<div class="cta-row"><a class="btn gold" href="#newsletter">Iscriviti al cantiere</a><a class="btn ghost" href="#pompei">Ero a Pompei →</a></div>
+</div>
 </header>
 
 <section id="chi-sono"><div class="wrap"><div class="bio">
@@ -108,6 +114,14 @@ section{padding:60px 0}
 <img src="FRC_2852.JPG" alt="Ivan Mazzoleni" style="width:100%;border-radius:18px;display:block;box-shadow:0 24px 60px rgba(15,37,46,.25)">
 </div></div></section>
 
+<section class="dark" id="pompei" style="background:var(--petrol)"><div class="wrap" style="text-align:center">
+<div class="kick">Human Driven AI Summit · Pompei, 18 settembre 2026</div>
+<h2>Distopia o utopia? Domanda sbagliata.</h2>
+<p class="lead" style="margin:0 auto;color:rgba(245,241,232,.85)">Sul palco di Pompei ho raccontato perché il futuro non è un luogo che ci aspetta, già costruito: si costruisce — immaginando e facendo, nel tempo presente. E ho lasciato al pubblico una frase da portare a casa:</p>
+<div style="font-family:var(--serif);font-size:31px;line-height:1.4;margin:34px auto 0;max-width:840px">«La tecnologia prende la forma delle mani che la impugnano.<br><span style="color:var(--gold2)">Tocca a noi.</span>»</div>
+<div class="cta-row"><a class="btn gold" href="hdai.html">Rivivi l'intervento →</a></div>
+</div></section>
+
 <section class="dark" id="cosa-faccio"><div class="wrap">
 <div class="kick">Cosa faccio</div>
 <h2>Tre modi per costruire insieme.</h2>
@@ -116,12 +130,6 @@ section{padding:60px 0}
 <div class="card"><svg viewBox="0 0 100 60"><path d="M50 53 C30 39 19 29 19 17.5 C19 8.5 27 4.5 33.5 4.5 C40.5 4.5 46 9.5 50 15.5 C54 9.5 59.5 4.5 66.5 4.5 C73 4.5 81 8.5 81 17.5 C81 29 70 39 50 53 Z" fill="none" stroke="#C9A227" stroke-width="4.5" stroke-linejoin="round"/><path d="M28 27 L41 27 L46 18 L53 37 L58 27 L72 27" fill="none" stroke="#7FB09A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Advisory Human Driven</h3><p>Prima i valori, poi la tecnologia: aiuto imprenditori e board a infondere purpose e virtù nella propria AI — e solo dopo a ottimizzare costi e ricavi. Con IM Holding.</p><a class="more" href="https://imholding.eu">Scopri IM Holding →</a></div>
 <div class="card"><svg viewBox="0 0 100 60"><circle cx="30" cy="30" r="7" fill="#C9A227"/><path d="M44 18 C52 24 52 36 44 42 M56 10 C68 19 68 41 56 50 M68 3 C84 14 84 46 68 57" fill="none" stroke="#7FB09A" stroke-width="4.5" stroke-linecap="round"/></svg><h3>Contenuti</h3><p>Newsletter, podcast Faber Fortunae, il libro in cantiere: strumenti per diventare imprenditori di sé stessi nell'era delle macchine che imparano.</p><a class="more" href="#cantiere">Entra nel cantiere →</a></div>
 </div></div></section>
-
-<div style="position:relative">
-<img src="IMG_0088.JPG" alt="Ivan Mazzoleni sul palco" loading="lazy" style="width:100%;display:block;max-height:540px;object-fit:cover;object-position:50% 18%">
-<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,37,46,.1) 30%,rgba(15,37,46,.78))"></div>
-<div style="position:absolute;left:0;right:0;bottom:44px;text-align:center;color:var(--ivory);font-family:var(--serif);font-size:30px;padding:0 24px">«La tecnologia prende la forma delle mani che la impugnano.<br><span style="color:var(--gold2)">Tocca a noi.</span>»</div>
-</div>
 
 <section class="faber" id="faber"><div class="wrap"><div class="faber-inner">
 <div class="faber-logo"><svg viewBox="0 0 560 560" id="faberSpiral"></svg><div class="wm">FABER FORTUNAE</div><div class="motto">fortunati si diventa</div></div>
